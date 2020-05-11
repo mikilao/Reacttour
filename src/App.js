@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Navbar from "./Navbar";
 import './App.scss';
-import TourList from "./components/tourlist";
-import Navbar from './Navbar';
+import TourList from "./Components/tourlist/TourList.js";
+
+//import TourList from "./tourlist";
+
 
 function App (){
  return (
@@ -12,12 +14,15 @@ function App (){
        <TourList />
     </div>
   )}
-  //class App extends Component {
-   // render(){
-     // return
-     
-   // }
- // }
+  /*class App extends Component {
+   render(){
+     return
+     <div> 
+       <Navbar />
+       <TourList />
+     </div>
+        }
+ }*/
 
 
 export default App;
