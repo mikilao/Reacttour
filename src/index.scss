@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 $mainBlack: #222;
-$mainGreen: #82b340;
 $mainWhite: #fff;
-$mainGrey: #464665;
-$mainRed: #ff0119;
+$mainGrey: #464605;
+$mainRed: #b51631;
+$mainGold: #e0b834;
 
 body{
-    background-color: $mainGreen;
+    background-color: $mainGold;
     color: $mainGrey;
     font-family: 'Maven Pro', sans-serif;
 }

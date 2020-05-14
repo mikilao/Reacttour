@@ -2,27 +2,31 @@
 .navbar{
     background: $mainBlack;
     padding: 0.5rem 1rem;
-    display:grid;
+    display:flex;
     grid-template-columns: auto 1fr;
-
-}
+ }
 .nav-links{
     align-self: center;
     list-style-type: none;
-    display:grid; 
+    display:flex; 
     grid-template-columns: repeat(3,1fr);
-    text-align:center;
+    text-align:center;  
+  
 }
 .nav-link{
     color: $mainGrey;
-    text-decoration:none;
+    display: inline-block;
+    text-decoration: none;
     text-transform: capitalize;
     font-size: 1.2rem;
     transition: all 0.3s linear;
     &hover{
-        color: $mainGreen;
-    }
+        color: $mainWhite;
+    };
+  
+
 }
 .active{
     color: blue;
 }
+

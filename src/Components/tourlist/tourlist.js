@@ -9,10 +9,17 @@ export default class TourList extends Component{
         tours: tourData
     }
     render(){
-        console.log( this.state.tours)
-        return(
+       // console.log( this.state.tours)
+       const {tours}  = this.state;
+       return(
             <section className="tourlist">
-                <Tour />
+                {tours.map(tour => {
+                    return(
+                         <Tour key={tour.id} tour={tour} />
+                         
+                    )
+                })}
+               
             </section>
         )
     }
