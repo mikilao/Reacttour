@@ -1,4 +1,4 @@
-import {Switch, Route, Link} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import React, { Component } from 'react';
 import Header from './headerComponent';
 import Footer from './FooterComponent';
@@ -12,15 +12,15 @@ export default class Main extends Component {
 
          return( 
               <div>
-                  <Link to="/">Home</Link>
-                  <Link to="/AdventureComponent">Adventure</Link>
+                     <Navbar />
                   <Switch>
         <Route component={Adventure} exact="/" />
         <Route component={TourList} path="/Tourlist" />
               
             </Switch>
-                <Navbar />
+          
              <Header />
+                
                 <TourList />
                 <Footer />
                </div>

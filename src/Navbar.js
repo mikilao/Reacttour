@@ -1,6 +1,7 @@
 import './Navbar.scss';
 import React from 'react';
 import logo from './assets/logo.jpg';
+import {Link} from 'react-router-dom';
 //import {Row, Col} from 'react-strap';
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
                         <img src={logo} alt="Golden Gate Logo" height='50px' max-width="50" />
                         <ul className="nav-links">
                             <li id="nav"> <a className="nav-link" href="tour.html"><i className="fas fa-city"></i>Tours</a></li>
-                            <li id="nav">  <a className="nav-link " href="adventures.html"><i className="fas fa-hiking"></i>Adventures</a></li>
+                            <li id="nav"><Link to="/AdventureComponent"> <a className="nav-link " href="adventures.html"><i className="fas fa-hiking"></i>Adventures</a></Link></li>
                             <li id="nav"><a className="nav-link " href="aboutus.html"> About Us</a></li>
                         </ul>
                     </nav>

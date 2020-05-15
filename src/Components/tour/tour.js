@@ -15,6 +15,7 @@ class Tour extends Component {
         const {city, info, id, img, name}= this.props.tour;
         const{removeTour} = this.props;
         return(
+            <div> 
             
            <article className="tour">
             <div  className="img-container">
@@ -28,7 +29,7 @@ class Tour extends Component {
            </div>
           <div className="tour-info">
           <h3> {city}</h3>
-          <button className="btn btn-primary">More <span onClick={this.handleInfo}> 
+          <button className="tourbtn">More <span onClick={this.handleInfo}> 
               <i className="fas fa-caret-square-down"/>
             
              </span></button>
@@ -37,7 +38,7 @@ class Tour extends Component {
             </div>
           </div>
             </article>
-           
+           </div>
          
         )
     }
