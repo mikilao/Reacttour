@@ -4,13 +4,15 @@
     padding: 0.5rem 1rem;
     display:flex;
     grid-template-columns: auto 1fr;
+    
  }
 .nav-links{
-    align-self: center;
+    align-self:auto ;
     list-style-type: none;
-    display:flex; 
+    display:inline-flex; 
     grid-template-columns: repeat(3,1fr);
     text-align:center;  
+    padding-left: 20px;
   
 }
 .nav-link{
@@ -24,8 +26,13 @@
         color: $mainWhite;
     };
   
-
 }
+ #nav a{
+      color: $mainWhite;
+      margin: 5px 20px;
+    }
+  
+
 .active{
     color: blue;
 }

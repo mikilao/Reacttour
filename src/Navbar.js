@@ -25,9 +25,9 @@ export default function Navbar() {
                     <nav className="navbar sticky-top navbar-dark bg-dark">
                         <img src={logo} alt="Golden Gate Logo" height='50px' max-width="50" />
                         <ul className="nav-links">
-                            <li> <a className="nav-link" href="tour.html"><i className="fas fa-city"></i>Tours</a></li>
-                            <li>  <a className="nav-link " href="adventures.html"><i className="fas fa-hiking"></i>Adventures</a></li>
-                            <li><a className="nav-link " href="aboutus.html"> About Us</a></li>
+                            <li id="nav"> <a className="nav-link" href="tour.html"><i className="fas fa-city"></i>Tours</a></li>
+                            <li id="nav">  <a className="nav-link " href="adventures.html"><i className="fas fa-hiking"></i>Adventures</a></li>
+                            <li id="nav"><a className="nav-link " href="aboutus.html"> About Us</a></li>
                         </ul>
                     </nav>
                 </div>

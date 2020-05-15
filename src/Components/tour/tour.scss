@@ -4,6 +4,7 @@
      background: $mainRed;
      border-radius: 0.8rem;
      margin: 1rem 0;
+
      img{
          width:100%;
          border-top-left-radius:0.8rem;
@@ -19,8 +20,15 @@
 	margin: 2rem 0;
   text-align: center;
   height: 500px;
- color: white;
+ color: $mainBlack;
   font-size: 30px;
+}
+.container{
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+
 }
 .img-container{
     position: relative;
@@ -49,11 +57,13 @@
             }
         }
     }
+    
+        
 .close-btn{
     position: absolute;
     display: block;
     top:5%;
-    color: $mainGrey;
+    color: $mainWhite;
     font-size: 2rem;
     cursor: pointer;
     transition: all 0.3s linear;
