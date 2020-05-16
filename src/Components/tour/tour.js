@@ -14,6 +14,7 @@ class Tour extends Component {
     render(){
         const {city, info, id, img, name}= this.props.tour;
         const{removeTour} = this.props;
+
         return(
             <div> 
             

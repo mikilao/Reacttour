@@ -18,18 +18,19 @@ export default class Main extends Component {
                      <Navbar />
                      <Header />
                      <TransitionGroup>
-                     <CSSTransition key="key" timeout={200} classNames="my-node">
+                     <CSSTransition key="key" timeout={200} classNames="openNode">
                   <Switch>
                   <Route path='/home' component={HomePage} />
-            <Route component={Adventure} exact path='/Adventure' render= {() => <Adventure />} > </Route>
+            <Route component={Adventure} exact path='/Adventure'  render= {() => <Adventure />}> </Route>
          <Route component={TourList}  path="/Tourlist" render={() => <TourList />} />
-              
-            </Switch>
+              <Route component={AboutUs} path="/AboutUs" />
+                          </Switch>
           </CSSTransition>
           </TransitionGroup>
+          <Adventure />
              
                 
-                <AboutUs />
+               
                 <Footer />
                </div>
          )                

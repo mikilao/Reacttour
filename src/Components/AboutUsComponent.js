@@ -1,6 +1,6 @@
 import React from "react";
 //import { tourData } from "./tourlist/tourData";
-import {Label, Form, Input, Button, FormGroup} from 'reactstrap';
+import {Label, Form, Input, Button, FormGroup, Control, Col} from 'reactstrap';
 
 
 
@@ -13,26 +13,28 @@ export default function AboutUs (){
                   <div className="row row-content">
                       <div className="col ">
                           <FormGroup>
+
                               <Label for="form-label">Firstname </Label>
                               <Input id="form-name" type="text" name="name" className="form-control" placeholder="First name " />
                              
                           </FormGroup>
                       </div>
                       <div className="col">
-                          <div className="form-group">
+                          <FormGroup>
                               <Label for="form-lastname">Lastname </Label>
                               <Input id="form-lastname" type="text" name="lastname" className="form-control" placeholder="Last name"  />
                              
-                          </div>
+                          </FormGroup>
                       </div>
                   </div>
                   <div className="row row-content">
                       <div className="col ">
-                          <div className="form-group">
+                          <FormGroup>
                               <Label for="form-email">Email</Label>
-                              <Input id="form-email" type="email" name="email" className="form-control" placeholder="Email" />
-                             
-                          </div>
+                              <Col md={10}>
+                               <Input id="form-email" type="email" name="email" className="form-control" placeholder="Email" />
+                             </Col>
+                          </FormGroup>
                       </div>
                       <div className="col ">
                           <div className="form-group">
@@ -56,30 +58,11 @@ export default function AboutUs (){
                           </div>
                       </div>
                       <div className="col">
-                          <Button type="submit" id="submit"  onclick={alert("Thank you")} className="btn btn-success btn-send" >Submit</Button>
+                          <Button type="submit" id="submit"  onclick={console.log("clicked")} className="btn btn-success btn-send" >Submit</Button>
                       </div>
                   </div>
               </div>
-              <FormGroup>
-        <Label for="exampleEmail">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="examplePassword">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleSelect">Select</Label>
-        <Input type="select" name="select" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
-      </FormGroup>
-      
-          </Form>
+                       </Form>
       </section>
      )
  }
