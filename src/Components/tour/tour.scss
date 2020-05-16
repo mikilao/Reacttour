@@ -12,6 +12,29 @@
          display: block;
      }
 }
+.section-a {
+	margin: 2rem 0;
+	
+} 
+.section-a .container{ 
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 3rem;
+	align-items: auto;
+	justify-content: left;
+  padding-bottom: 50px;
+}
+.section-a h1{
+	font-size: 4rem;
+	color: $mainBlack
+
+}
+.secion-a p{
+margin: 1rem;
+}
+Form{
+    color: blue;
+}
 .header {
 	position: relative;
 	background: url("http://www.twitrcovers.com/wp-content/uploads/2015/01/San-Francisco-l.jpg") no-repeat center/cover fixed;
@@ -57,7 +80,9 @@
             }
         }
     }
-    
+    .form-message{
+        height: 200 px;
+    }  
         
 .close-btn{
     position: absolute;
@@ -98,5 +123,14 @@
         line-height: .5rem;
     
     }
-
-//card
+.row-content{
+    display: inline-flex;
+}
+Form{ 
+     border:solid black 20px;
+    margin: 40px 20px;
+    input{
+        position:left;
+      
+    }
+}

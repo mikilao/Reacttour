@@ -20,10 +20,9 @@ export default class Adventure extends Component {
                   });
                 }
     render(){
-        
         return(
            <div>
-            
+          
        <Button color="success" onClick={this.toggleModal}>Book now</Button>{' '}
                 <Modal clasName="container" toggle={this.toggleModal} isOpen={this.state.isModalOpen}  onRequestClose={() => this.state.isModalOpen(false)}>
                    <ModalHeader toggle={this.toggleModal}>Tours</ModalHeader>

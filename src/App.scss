@@ -1,6 +1,7 @@
 @import './index.scss';
 .App {
 	text-align: center;
+
   }
 body {
 	font-family: 'Catamaran', sans-serif;
@@ -11,6 +12,7 @@ body {
 
 h1, h2, h3, h4{
 	line-height: 1.3;
+	color: $mainRed;
 }
 
 .container{
@@ -55,7 +57,7 @@ h1, h2, h3, h4{
 	display: inline;
 	
 	  background-color: $mainGold;
-	  font-size: 1rem;
+	  font-size: .5rem;
 	  text-align: center;
 	  margin: 0;
 	  padding: 0;

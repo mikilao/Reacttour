@@ -1,8 +1,9 @@
 import './Navbar.scss';
 import React from 'react';
 import logo from './assets/logo.jpg';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 //import {Row, Col} from 'react-strap';
+
 
 export default function Navbar() {
     return (
@@ -24,11 +25,11 @@ export default function Navbar() {
             <div className="row">
                 <div className="col ">
                     <nav className="navbar sticky-top navbar-dark bg-dark">
-                        <img src={logo} alt="Golden Gate Logo" height='50px' max-width="50" />
+                       <NavLink to="/home"> <img src={logo} alt="Golden Gate Logo" height='50px' max-width="50" /></NavLink>
                         <ul className="nav-links">
-                            <li id="nav"> <a className="nav-link" href="tour.html"><i className="fas fa-city"></i>Tours</a></li>
-                            <li id="nav"><Link to="/AdventureComponent"> <a className="nav-link " href="adventures.html"><i className="fas fa-hiking"></i>Adventures</a></Link></li>
-                            <li id="nav"><a className="nav-link " href="aboutus.html"> About Us</a></li>
+                            <li id="nav"><NavLink className="nav-link" to="/TourList"><a className="nav-link" href="/"><i className="fas fa-city"></i>Tours</a></NavLink> </li>
+                            <li id="nav"><NavLink to="/Adventure"> <a className="nav-link " href="/" ><i className="fas fa-hiking"></i>Adventures</a></NavLink></li>
+                            <li id="nav"><NavLink to="/AboutUs"><a className="nav-link " href="/"> About Us</a></NavLink></li>
                         </ul>
                     </nav>
                 </div>
