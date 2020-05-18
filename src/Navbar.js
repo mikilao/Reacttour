@@ -28,7 +28,7 @@ export default function Navbar() {
                        <NavLink to="/home"> <img src={logo} alt="Golden Gate Logo" height='50px' max-width="50" /></NavLink>
                         <ul className="nav-links">
                             <li id="nav"><NavLink to="/TourList"><a className="nav-link" href="/"><i className="fas fa-city"></i>Tours</a></NavLink> </li>
-                            <li id="nav"><NavLink to="/Adventure"> <a className="nav-link " href="/" ><i className="fas fa-hiking"></i>Adventures</a></NavLink></li>
+                            <li id="nav"><NavLink to="/Adventure"> <a className="nav-link " href="/Adventure" ><i className="fas fa-hiking"></i>Adventures</a></NavLink></li>
                             <li id="nav"><NavLink to="/AboutUs"><a className="nav-link " href="/"> About Us</a></NavLink></li>
                         </ul>
                     </nav>

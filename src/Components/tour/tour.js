@@ -16,7 +16,7 @@ class Tour extends Component {
         const{removeTour} = this.props;
 
         return(
-            <div> 
+            <div className="container"> 
             
            <article className="tour">
             <div  className="img-container">

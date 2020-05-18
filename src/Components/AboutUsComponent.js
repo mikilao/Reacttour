@@ -1,44 +1,97 @@
 import React from "react";
 //import { tourData } from "./tourlist/tourData";
-import {Label, Form, Input, Button, FormGroup, Control, Col} from 'reactstrap';
+import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstrap';
 
 
 
-export default function AboutUs (){
-     return( 
-        <section className="section-b">
-        <Form id="contact-form" className="form-control-wrap">
-          <div className="container" id="headliner">
-              <h1> Book a tour or request more information About us:</h1>
-                  <div className="row row-content">
-                      <div className="col ">
-                          <FormGroup>
+//export default function AboutUs (){
+  //   return( 
+  
+        const initialState = {
+          name: "",
+          email: "",
+          password: "",
+          nameError: "",
+          emailError: "",
+       
+        
+        };
+        
+        export default class ValiationForm extends React.Component {
+          state = initialState;
+        
+          handleChange = event => {
+            const isCheckbox = event.target.type === "checkbox";
+            this.setState({
+              [event.target.name]: isCheckbox
+                ? event.target.checked
+                : event.target.value
+            });
+          };  
+        
+          validate = () => {
+            let nameError = "";
+            let emailError = "";
+            // let passwordError = "";
+        
+            if (!this.state.name) {
+              nameError = "name cannot be blank";
+            }
+        
+            if (!this.state.email.includes("@")) {
+              emailError = "invalid email";
+            }
+        
+            if (emailError || nameError) {
+              this.setState({ emailError, nameError });
+              return false;
+            }
+        
+            return true;
+          };
+        
+          handleSubmit = event => {
+            event.preventDefault();
+            const isValid = this.validate();
+            if (isValid) {
+              console.log(this.state);
+              // clear form
+              this.setState(initialState);
+            }
+          };
+        
+          render() {
+            return (
+              <div>
 
-                              <Label for="form-label">Firstname </Label>
-                              <Input id="form-name" type="text" name="name" className="form-control" placeholder="First name " />
-                             
-                          </FormGroup>
-                      </div>
-                      <div className="col">
-                          <FormGroup>
-                              <Label for="form-lastname">Lastname </Label>
-                              <Input id="form-lastname" type="text" name="lastname" className="form-control" placeholder="Last name"  />
-                             
-                          </FormGroup>
-                      </div>
+            <h1> Book a tour or request more information About us:</h1>
+              <form onSubmit={this.handleSubmit}>
+                <div>
+                  <input
+                    name="name"
+                    placeholder="name"
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                  />
+                  <div style={{ fontSize: 12, color: "red" }}>
+                    {this.state.nameError}
                   </div>
-                  <div className="row row-content">
-                      <div className="col ">
-                          <FormGroup>
-                              <Label for="form-email">Email</Label>
-                              <Col md={10}>
-                               <Input id="form-email" type="email" name="email" className="form-control" placeholder="Email" />
-                             </Col>
-                          </FormGroup>
-                      </div>
-                      <div className="col ">
+                </div>
+                <div>
+                  <input
+                    name="email"
+                    placeholder="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                  <div style={{ fontSize: 12, color: "red" }}>
+                    {this.state.emailError}
+                  </div>
+                </div>
+               
+                <div className="col ">
                           <div className="form-group">
-                              <Label for="form-label">Please specify your need </Label>
+                              < h3 for="form-label">Please specify your need </h3>
                               <select id="form-book" name="book" className="form-control" >
                                   <option value="Book a tour">Book a Tour</option>
                                   <option value="Request quotation">Request private tours</option>
@@ -48,21 +101,22 @@ export default function AboutUs (){
                              
                           </div>
                       </div>
-                  </div>
-                  <div className="row row-content">
-                      <div className="col">
-                          <div className="form-group">
-                              <Label for="form-label">Message</Label>
-                              <Input id="form-message" className="form-control text" type="textarea" name="text"placeholder="Message for me" />
-                              
-                          </div>
+                      <div >
+                      <Row className="form-group">
+                                <Label htmlFor="feedback" md={2}>Your Feedback</Label>
+                                <Col md={10}>
+                                    <Input model=".feedback" id="feedback" name="feedback"
+                                        rows="12"
+                                        className="form-control"
+                                    />
+                                </Col>
+                            </Row> 
                       </div>
-                      <div className="col">
-                          <Button type="submit" id="submit"  onclick={console.log("clicked")} className="btn btn-success btn-send" >Submit</Button>
-                      </div>
-                  </div>
+                <button type="submit">submit</button>
+              </form>
               </div>
-                       </Form>
-      </section>
-     )
- }
+            );
+          }
+        }
+         
+     

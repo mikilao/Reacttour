@@ -3,36 +3,63 @@ import './tour/tour.scss';
 import Modal from 'react-modal';
 import { Button, Input, FormGroup, Form, Label,  ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
 
-
-
-export default class Adventure extends Component {
-    constructor(props) {
-        super(props);
-        this.state ={
-            name: '',
-            lastname: '',
-            email: ' ',
-            modalIsOpen : false,
-            setModalIsOpen : false,
-            isModalOpen: false,
-            touched:{
-                name: false,
-                lastname: false,
-                email: false,
-            }
-
-        }
+const initialState ={
+    name: '',
+    lastname: '',
+    email: ' ',
+    modalIsOpen : false,
+    setModalIsOpen : false,
+    isModalOpen: false,
+    touched:{
+        name: false,
+        lastname: false,
+        email: false,
     }
 
-validate(name, lastName, email) {
+}
 
-    const errors = {
-        name: '',
-        lastName: '',
-        email: ''
+class Adventure extends Component {
+ state = initialState
+    handleChange = event => {
+        const isCheckbox = event.target.type === "checkbox";
+        this.setState({
+          [event.target.name]: isCheckbox
+            ? event.target.checked
+            : event.target.value
+        });
+      };  
+
+
+      validate = () => {
+        let nameError = "";
+        let emailError = "";
+        // let passwordError = "";
+    
+        if (!this.state.name) {
+          nameError = "name cannot be blank";
+        }
+    
+        if (!this.state.email.includes("@")) {
+          emailError = "invalid email";
+        }
+    
+        if (emailError || nameError) {
+          this.setState({ emailError, nameError });
+          return false;
+        }
+    
+        return true;
+      };
+    handleSubmit = event => {
+      event.preventDefault();
+      const isValid = this.validate();
+      if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState(initialState);
+      }
     };
-
-    if (this.state.touched.name) {
+   /* if (this.state.touched.name) {
         if (name.length < 2) {
             errors.name = 'First name must be at least 2 characters.';
         } else if (name.length > 15) {
@@ -54,24 +81,24 @@ validate(name, lastName, email) {
     }
 
     return errors;
-}
+}*/
 
     toggleModal= () => {
         this.setState({
             isModalOpen: !this.state.isModalOpen
                   });
-                }
+                };
     render(){
         return(
-           <div>
-          <h2>Adventures</h2>
-          
+           <div className="container" name="adventure">
+          <h2 style={{padding: 50}}>Adventures</h2>
+          <p>Pancetta ground round jerky chicken, beef pork chop fatback cow meatball picanha. Porchetta tail beef ribs salami, ham tongue cupim. Chicken drumstick doner, ham hock pork cupim andouille meatloaf salami. Pork chop brisket bacon swine. Rump alcatra ball tip leberkas andouille pork belly kevin fatback flank meatball meatloaf beef chuck spare ribs.</p>
                 <Button color="success" onClick={this.toggleModal}>Book now</Button>{' '}
                 <Modal clasName="container" toggle={this.toggleModal} isOpen={this.state.isModalOpen} onRequestClose={() => this.state.isModalOpen(false)}>
                     <ModalHeader toggle={this.toggleModal}>Tours</ModalHeader>
                     <p className="container">Bacon ipsum dolor amet cupim meatball pig andouille. Veniam elit landjaeger burgdoggen, ipsum consequat meatloaf eu nulla tri-tip consectetur sirloin aliqua cow est. Deserunt chuck meatloaf ad turkey ribeye in dolor irure quis. Eiusmod tongue sausage fatback aute non, pork belly ullamco jowl. Ham excepteur ea, ullamco pork belly capicola fugiat dolore pastrami jerky turducken kielbasa labore pork chop shoulder. Sed nulla ad ut kevin cupim. Officia qui ipsum sed.</p>
                     <ModalBody className="container">
-                        <Form id="contact-form" >
+                        <Form id="contact-form" onSubmit={this.handleSubmit} >
                             <FormGroup className="form-group">
                                 <div>
                                 <Label for="form-label" md={4}>Firstname </Label>
@@ -119,3 +146,4 @@ validate(name, lastName, email) {
         )
     }
 } 
+export default Adventure;

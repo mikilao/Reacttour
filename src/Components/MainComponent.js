@@ -1,6 +1,6 @@
 import {Switch, Route} from "react-router-dom";
 import React, { Component } from 'react';
-import {TransitionGroup, CSSTransition} from 'react-transition-group';
+
 import Header from './headerComponent';
 import Footer from './FooterComponent';
 import TourList from "./tourlist/TourList";
@@ -17,20 +17,13 @@ export default class Main extends Component {
               <div>
                      <Navbar />
                      <Header />
-                     <TransitionGroup>
-                     <CSSTransition key="key" timeout={200} classNames="openNode">
                   <Switch>
                   <Route path='/home' component={HomePage} />
-            <Route component={Adventure} exact path='/Adventure'  render= {() => <Adventure />}> </Route>
-         <Route component={TourList}  path="/Tourlist" render={() => <TourList />} />
-              <Route component={AboutUs} path="/AboutUs" />
+            <Route component={Adventure} exact path='/Adventure'  render={() => <Adventure />}> </Route>
+         <Route component={TourList}  exact path="/Tourlist" render={() => <TourList />} />
+              <Route component={AboutUs} exact path="/AboutUs" />
                           </Switch>
-          </CSSTransition>
-          </TransitionGroup>
-          <Adventure />
-             
-                
-               
+
                 <Footer />
                </div>
          )                
