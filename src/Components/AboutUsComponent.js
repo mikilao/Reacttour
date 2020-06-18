@@ -1,6 +1,6 @@
 import React from "react";
 //import { tourData } from "./tourlist/tourData";
-import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstrap';
+import {Label, Input,  Row, Col} from 'reactstrap';
 
 
 
@@ -62,12 +62,12 @@ import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstr
         
           render() {
             return (
-              <div>
+              <div id="aboutform">
 
             <h1> Book a tour or request more information About us:</h1>
               <form onSubmit={this.handleSubmit}>
                 <div>
-                  <input
+                  <Input
                     name="name"
                     placeholder="name"
                     value={this.state.name}
@@ -78,10 +78,11 @@ import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstr
                   </div>
                 </div>
                 <div>
-                  <input
+                  <Input
                     name="email"
                     placeholder="email"
                     value={this.state.email}
+                   
                     onChange={this.handleChange}
                   />
                   <div style={{ fontSize: 12, color: "red" }}>
@@ -92,7 +93,7 @@ import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstr
                 <div className="col ">
                           <div className="form-group">
                               < h3 for="form-label">Please specify your need </h3>
-                              <select id="form-book" name="book" className="form-control" >
+                              <select id="formtext" name="book" className="form-control" >
                                   <option value="Book a tour">Book a Tour</option>
                                   <option value="Request quotation">Request private tours</option>
                                   <option value="Request information">Request more information</option>
@@ -105,14 +106,16 @@ import {Label, Form, Input, Button, FormGroup, Control, Row, Col} from 'reactstr
                       <Row className="form-group">
                                 <Label htmlFor="feedback" md={2}>Your Feedback</Label>
                                 <Col md={10}>
-                                    <Input model=".feedback" id="feedback" name="feedback"
-                                        rows="12"
-                                        className="form-control"
+                                    <Input model="feedback"
+                                       id="feedback"
+                                       name="feedback"
+                                       rows="12"
+                                       className="feedback"
                                     />
                                 </Col>
                             </Row> 
                       </div>
-                <button type="submit">submit</button>
+                <button type="submit" onClick={console.log('See you in San Francisco!')}>submit</button>
               </form>
               </div>
             );
