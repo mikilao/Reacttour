@@ -1,6 +1,7 @@
 import React from "react";
 //import { tourData } from "./tourlist/tourData";
 import {Label, Input,  Row, Col} from 'reactstrap';
+//import './tour/tour.scss';
 
 
 
@@ -78,6 +79,7 @@ import {Label, Input,  Row, Col} from 'reactstrap';
                   </div>
                 </div>
                 <div>
+                  <Label  className="form-label" name='email' >Email</Label>
                   <Input
                     name="email"
                     placeholder="email"
@@ -92,7 +94,7 @@ import {Label, Input,  Row, Col} from 'reactstrap';
                
                 <div className="col ">
                           <div className="form-group">
-                              < h3 for="form-label">Please specify your need </h3>
+                            <Label className="form-label">Please specify your need </Label>
                               <select id="formtext" name="book" className="form-control" >
                                   <option value="Book a tour">Book a Tour</option>
                                   <option value="Request quotation">Request private tours</option>
