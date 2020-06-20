@@ -159,6 +159,8 @@ margin: 1rem;
     }       
 } 
 
+
+
 // Alice Carousel Scss
 .alice-carousel {
   position: relative;
@@ -403,4 +405,11 @@ margin: 1rem;
       }
     }
   }
+#aboutform{
+  padding: 30px;
+  color: #303030;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
  
+ }

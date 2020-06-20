@@ -5,7 +5,8 @@ export const tourData = [
     img: "https://assets.vogue.com/photos/5891f9739c1609bf7a72f48c/master/w_2560%2Cc_limit/00-art-guided-tour-of-san-francisco.jpg",
     name: "Museum   tour",
     info:
-      "Pork pork loin pancetta beef ribs pork chop, tail cupim t-bone Hamburger corned beef biltong pork loin tri-tip ground round beef ribs."
+      "Pork pork loin pancetta beef ribs pork chop, tail cupim t-bone Hamburger corned beef biltong pork loin tri-tip ground round beef ribs.",
+      price: "$109"
   },
   {
     id: 1,
@@ -13,7 +14,8 @@ export const tourData = [
     img:  "https://www.e-biketours.net/imag/ggb/palace-of-fine-arts.webp",
     name: "WaterFront tour",
     info:
-      "tongue chislic burgdoggen frankfurter short ribs chicken corned beef. "
+      "tongue chislic burgdoggen frankfurter short ribs chicken corned beef. ",
+      price: "$109"
   },
   {
     id: 2,
@@ -21,7 +23,8 @@ export const tourData = [
     img: "https://dr5dymrsxhdzh.cloudfront.net/blog/images/afc8f1c76/2015/05/golden-gate-bridge-at-sunset-san-francisco-california-usa-picture-id921956634.jpg",
     name: "Soma tour",
     info:
-      "picanha short loin meatball. Short ribs jerky short loin tongue, andouille jowl boudin burgdoggen biltong tri-tip"
+      "picanha short loin meatball. Short ribs jerky short loin tongue, andouille jowl boudin burgdoggen biltong tri-tip",
+      price: "$119",
   },
   {
     id:3,
@@ -29,7 +32,8 @@ export const tourData = [
     img: "http://parkwestgc.com/wp-content/uploads/2015/12/Fotolia_81912393_Subscription_Monthly_M.jpg",
     name: "Fi Di tour",
     info:
-      "picanha short loin meatball. Short ribs jerky short loin tongue, andouille jowl boudin burgdoggen biltong tri-tip"
+      "picanha short loin meatball. Short ribs jerky short loin tongue, andouille jowl boudin burgdoggen biltong tri-tip",
+      price: "$89"
     }
  
 ];

@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import './tour/tour.scss';
 import Modal from 'react-modal';
-import {Gallery} from './CarouselComponent'
+import { Gallery } from './CarouselComponent';
+import SimpleReactCalendar from 'simple-react-calendar'
 
 import { Button, Input, FormGroup, Form, Label, ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
 
@@ -92,14 +93,14 @@ class Adventure extends Component {
     };
     render() {
         return (
-            <div className="container"  name="adventure">
+            <div className="container" name="adventure">
                 <div className="adventure">
                     <h2 style={{ padding: 50, fontSize: '50px' }}>Adventures</h2>
                     <p style={{ padding: 20, }}>Pancetta ground round jerky chicken, beef pork chop fatback cow meatball picanha. Porchetta tail beef ribs salami, ham tongue cupim. Chicken drumstick doner, ham hock pork cupim andouille meatloaf salami. Pork chop brisket bacon swine. Rump alcatra ball tip leberkas andouille pork belly kevin fatback flank meatball meatloaf beef chuck spare ribs.</p>
                 </div>
                 <Button color="success" onClick={this.toggleModal}>Book now</Button>{' '}
-                <Modal clasName="container" toggle={this.toggleModal} isOpen={this.state.isModalOpen} onRequestClose={() => this.state.isModalOpen(false)}>
-                    <ModalHeader style={{ padding: 50,  fontSize: '50px' }} toggle={this.toggleModal}>Tours</ModalHeader>
+                <Modal clasName="container" toggle={this.toggleModal} isOpen={this.state.isModalOpen} onRequestClose={() => this.state.isModalOpen}>
+                    <ModalHeader style={{ padding: 50, fontSize: '50px' }} toggle={this.toggleModal}>Tours</ModalHeader>
                     <p className="container">Bacon ipsum dolor amet cupim meatball pig andouille. Veniam elit landjaeger burgdoggen, ipsum consequat meatloaf eu nulla tri-tip consectetur sirloin aliqua cow est. Deserunt chuck meatloaf ad turkey ribeye in dolor irure quis. Eiusmod tongue sausage fatback aute non, pork belly ullamco jowl. Ham excepteur ea, ullamco pork belly capicola fugiat dolore pastrami jerky turducken kielbasa labore pork chop shoulder. Sed nulla ad ut kevin cupim. Officia qui ipsum sed.</p>
                     <ModalBody className="container">
                         <Form id="contact-form" onSubmit={this.handleSubmit} >
@@ -111,7 +112,6 @@ class Adventure extends Component {
                                 </div>
                                 <Label for="form-lastname">Lastname </Label>
                                 <Input id="lastName" type="text" name="lastname" className="form-control" placeholder="Last name" />
-
 
                                 <Label for="form-email" md={4}>Email</Label>
                                 <Input id="email" type="email" name="email" className="form-control" placeholder="Email" />
@@ -146,17 +146,17 @@ class Adventure extends Component {
                     </ModalFooter>
                 </Modal>
                 <div className="container" >
-                <h1 style={{padding: '40px 0'}}>Gallery</h1>
-                <h3>Check out some photos</h3>
-               <Gallery />
-                 </div>
+                    <h1 style={{ padding: '40px 0' }}>Gallery</h1>
+                    <h3>Check out some photos</h3>
+                    <Gallery />
+                </div>
             </div>
-            
+
 
 
         )
     }
-    
+
 }
 
 export default Adventure;
