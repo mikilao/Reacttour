@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Reacttour/static/css/main.8d0f8ca5.chunk.css",
+    "main.js": "/Reacttour/static/js/main.83b0a6bd.chunk.js",
+    "main.js.map": "/Reacttour/static/js/main.83b0a6bd.chunk.js.map",
+    "runtime-main.js": "/Reacttour/static/js/runtime-main.7a7fa79e.js",
+    "runtime-main.js.map": "/Reacttour/static/js/runtime-main.7a7fa79e.js.map",
+    "static/js/2.abe25f63.chunk.js": "/Reacttour/static/js/2.abe25f63.chunk.js",
+    "static/js/2.abe25f63.chunk.js.map": "/Reacttour/static/js/2.abe25f63.chunk.js.map",
+    "index.html": "/Reacttour/index.html",
+    "precache-manifest.7cf5c398cbb0c7ea290e27ce6312373d.js": "/Reacttour/precache-manifest.7cf5c398cbb0c7ea290e27ce6312373d.js",
+    "service-worker.js": "/Reacttour/service-worker.js",
+    "static/css/main.8d0f8ca5.chunk.css.map": "/Reacttour/static/css/main.8d0f8ca5.chunk.css.map",
+    "static/js/2.abe25f63.chunk.js.LICENSE.txt": "/Reacttour/static/js/2.abe25f63.chunk.js.LICENSE.txt",
+    "static/media/logo.jpg": "/Reacttour/static/media/logo.3d347ff9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a7fa79e.js",
+    "static/js/2.abe25f63.chunk.js",
+    "static/css/main.8d0f8ca5.chunk.css",
+    "static/js/main.83b0a6bd.chunk.js"
+  ]
+}
