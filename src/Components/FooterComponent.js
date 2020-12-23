@@ -8,9 +8,10 @@ class Footer extends Component {
             <footer className="section-footer">
             <div className="container">
                 <div className="row row-content">
-                    <div className="col d-block">
+                    <div className="col-3 d-block">
                     <h2>Golden Gate</h2>
                     <p>San Francisco Tour</p>
+                    
                     <a href="https://www.twitter.com">
                         <i className="fab fa-twitter fa-2x"></i></a>
                     <a href="https://www.facebook.com">
@@ -19,15 +20,15 @@ class Footer extends Component {
                         <i className="fab fa-youtube fa-2x"></i>
                     </a></div>
                 </div>
-                <div className='col-4'>
+                <div id="footList" className="col-lg-6">
                     <h3>Important Links</h3>
-                    <ul>
-                        <li><a href="https://www.yelp.com">Yelp</a></li>
+                    <ul >
+                        <li ><a classname="footList" href="https://www.yelp.com">Yelp</a></li>
                         <li><a href="https://www.Tripadvisor.com">Tripadvisor</a></li>
                         <li><a href="https://www.AirBnb.com">Airbnb</a></li>
                     </ul>
                 </div>
-                <div className="col "> 
+                <div className="col-lg-3"> 
                     <h3>Subscribe</h3>
                     <p>Cupim ribeye chuck porchetta, frankfurter doner boudin</p>
                     <form className="email-form" >

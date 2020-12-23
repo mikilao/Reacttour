@@ -7,7 +7,7 @@ import Navbar from "../Navbar";
 import AboutUs from './AboutUsComponent';
 import Adventure from './AdventuresComponent';
 import HomePage from './HomeComponent'
-import Home from "./HomeComponent";
+//import Home from "./HomeComponent";
 
 export default class Main extends Component {
 

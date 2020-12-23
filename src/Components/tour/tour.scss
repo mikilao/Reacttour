@@ -103,32 +103,45 @@ margin: 1rem;
 .section-footer{
     background: $mainBlack;
     color:#fff;
-    padding: 4rem 0;
+    padding: 4rem 0;  
+      text-decoration: none;
     
-    
+      color: $mainGold;
+    text-align: justify; 
+   
     }
+   
+    
     .section-footer .container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1rem;	
+        grid-gap: 3rem;	
+        border:solid red 4px;
         
     }
     .section-footer h2{
         font-size: 2rem;
         margin-bottom: 1rem;
+        border:solid blue 4px;
+      
     } 
     .section-footer h3{
         margin-bottom: .7rem;
-    
+        font-size: 28px;
     }
-    .section-footer{
+    .section-footer li{
         line-height: 1.9;
-        color: $mainWhite;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #fff;
+        list-style-type: none;
+        text-align: center;
+        
     }
     .section-footer a > i{
         color: $mainGold;
         line-height: .5rem;
-    
+        margin: 15px;
+          
     }
 .row-content{
     display: inline-flex;
@@ -412,3 +425,4 @@ margin: 1rem;
   flex-direction: column;
  
  }
+ 
